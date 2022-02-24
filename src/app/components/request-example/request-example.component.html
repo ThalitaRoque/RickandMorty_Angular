@@ -1,0 +1,20 @@
+ <div class="logo">
+      <img src="../../../assets/RM_logo.png" alt="" />
+    </div>
+
+ <ng-container *ngIf="!characterList.length">
+    <img src="https://giffiles.alphacoders.com/118/118789.gif" alt="Loading..." />
+    <h2>Loading...</h2>
+</ng-container> 
+<div class="personajes">
+<ng-container *ngIf="characterList.length">
+    <ul>
+        <li *ngFor="let character of characterList">
+            <h3>{{ character.id}} - {{ character.name }}</h3>
+            <p>Status: {{character.status}}</p>
+            <img src="{{ character.image }}" alt="{{ character.name }}" />
+
+        </li>
+    </ul>
+</ng-container>
+</div>
